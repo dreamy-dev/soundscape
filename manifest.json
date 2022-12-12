@@ -4,7 +4,7 @@
   "name": "Soundscape",
   "display": "standalone",
   "start_url": "/soundscape/",
-  "short_name": "starter",
+  "short_name": "soundscape",
   "theme_color": "#E1477E",
   "description": "This is the Soundscape app",
   "orientation": "any",
