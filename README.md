@@ -35,3 +35,10 @@ and all with just a few button clicks 😊.
 
 ## More Resources
 - [The pwa-starter docs](https://docs.pwabuilder.com/#/starter/quick-start)
+
+
+ For more information on the PWABuilder pwa-starter, check out the https://github.com/pwa-builder/pwa-starter/wiki/Getting-Started Documentation on Github
+
+ href="https://pwabuilder.comPWABuilder
+ https://pwabuilder.com PWABuilder
+ when you are ready to ship this PWA to the Microsoft Store, Google Play and the Apple App Store!
