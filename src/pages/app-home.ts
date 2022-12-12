@@ -142,7 +142,7 @@ export class AppHome extends LitElement {
           <sl-button href="${(import.meta as any).env.BASE_URL}about" variant="primary">Navigate to About</sl-button>
         </div>
 
-        <pwa-install>Install PWA Starter</pwa-install>
+        <pwa-install>Install Soundscape</pwa-install>
       </main>
     `;
   }
