@@ -1066,9 +1066,9 @@ found at http://polymer.github.io/PATENTS.txt
           <sl-button href="${"/soundscape/"}about" variant="primary">Navigate to About</sl-button>
         </div>
 
-        <pwa-install>Install PWA Starter</pwa-install>
+        <pwa-install>Install Soundscape</pwa-install>
       </main>
-    `}};Tn([Se()],_e.prototype,"message",2);_e=Tn([$e("app-home")],_e);var qi=Object.defineProperty,Ki=Object.getOwnPropertyDescriptor,Ne=(e,t,r,n)=>{for(var o=n>1?void 0:n?Ki(t,r):t,i=e.length-1,s;i>=0;i--)(s=e[i])&&(o=(n?s(t,r,o):s(o))||o);return n&&o&&qi(t,r,o),o};let Dt=class extends V{constructor(){super();this.title="PWA Starter",this.enableBack=!1}static get styles(){return Ht`
+    `}};Tn([Se()],_e.prototype,"message",2);_e=Tn([$e("app-home")],_e);var qi=Object.defineProperty,Ki=Object.getOwnPropertyDescriptor,Ne=(e,t,r,n)=>{for(var o=n>1?void 0:n?Ki(t,r):t,i=e.length-1,s;i>=0;i--)(s=e[i])&&(o=(n?s(t,r,o):s(o))||o);return n&&o&&qi(t,r,o),o};let Dt=class extends V{constructor(){super();this.title="Soundscape",this.enableBack=!1}static get styles(){return Ht`
       header {
         display: flex;
         justify-content: space-between;
@@ -1163,11 +1163,11 @@ found at http://polymer.github.io/PATENTS.txt
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var t;new H((t=this.shadowRoot)==null?void 0:t.querySelector("#routerOutlet")).setRoutes([{path:"/soundscape/",animate:!0,children:[{path:"",component:"app-home"},{path:"about",component:"app-about",action:async()=>{await Vn(()=>import("./app-about.64f37676.js"),[])}}]}])}render(){return mt`
+    `}constructor(){super()}firstUpdated(){var t;new H((t=this.shadowRoot)==null?void 0:t.querySelector("#routerOutlet")).setRoutes([{path:"/soundscape/",animate:!0,children:[{path:"",component:"app-home"},{path:"about",component:"app-about",action:async()=>{await Vn(()=>import("./app-about.0d2443a2.js"),[])}}]}])}render(){return mt`
       <div>
         <main>
           <div id="routerOutlet"></div>
         </main>
       </div>
     `}};Dr=Yi([$e("app-index")],Dr);export{zi as a,$e as e,Ht as i,V as s,mt as y};
-//# sourceMappingURL=index.c205b8e6.js.map
+//# sourceMappingURL=index.d066c222.js.map
