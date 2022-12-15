@@ -149,10 +149,20 @@ export class AppHome extends LitElement {
                             : null}
                     </sl-card>
 
+                    <div>
+                        <h3>Hello</h3>
+                        <app-card title="Ballonfahrt" bg-image=""></app-card>
+                    </div>
+
                     <sl-button
                         href="${(import.meta as any).env.BASE_URL}about"
                         variant="primary"
                         >Navigate to About</sl-button
+                    >
+                    <sl-button
+                        href="${(import.meta as any).env.BASE_URL}detail"
+                        variant="primary"
+                        >Navigate to Detail</sl-button
                     >
                 </div>
 
