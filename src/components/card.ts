@@ -8,6 +8,8 @@ export class AppCard extends LitElement {
 
     @property({ type: String }) bgimage = 'assets/covers/balloon-ride.jpg'
 
+    @property({ type: String }) audio = 'assets/audio/water_drips.mp3'
+
     @property({ type: Boolean }) enableBack: boolean = false
 
     @property({ type: Boolean, reflect: true })
@@ -66,13 +68,12 @@ export class AppCard extends LitElement {
                 <div
                     class="card"
                     style="background-image: url('${this.bgimage}')"
+                    @click="${() => (this.active = !this.active)}"
                 >
-                    <h3 @click="${() => (this.active = !this.active)}">
-                        ${this.title} ${this.active}
-                    </h3>
+                    <h3>${this.title} ${this.active}</h3>
                 </div>
 
-                <app-modal class="modal"></app-modal>
+                <app-modal class="modal" audio="${this.audio}"></app-modal>
             </div>
         `
     }

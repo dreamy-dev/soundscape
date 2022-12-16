@@ -152,7 +152,11 @@ export class AppHome extends LitElement {
 
                     <div>
                         <h3>Hello</h3>
-                        <app-card title="Ballonfahrt" bg-image=""></app-card>
+                        <app-card
+                            title="Ballonfahrt"
+                            bg-image=""
+                            audio="assets/audio/delightful_river.mp3"
+                        ></app-card>
                     </div>
 
                     <sl-button

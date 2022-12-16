@@ -6,6 +6,8 @@ import '@shoelace-style/shoelace/dist/components/button/button.js'
 export class Modal extends LitElement {
     @property({ type: String }) title = 'Example Title'
 
+    @property({ type: String }) audio = 'assets/audio/water_drips.mp3'
+
     @property({ type: String }) bgimage = 'assets/covers/balloon-ride.jpg'
 
     @property({ type: Boolean }) enableBack: boolean = false
@@ -54,6 +56,10 @@ export class Modal extends LitElement {
                           </sl-button>`
                         : null}
                     <h3>${this.title}</h3>
+                    <audio controls>
+                        <source src="${this.audio}" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
             </div>
         `
