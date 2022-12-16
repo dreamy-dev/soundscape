@@ -34,7 +34,7 @@ export class AppHome extends LitElement {
 
                 pwa-install {
                     position: absolute;
-                    bottom: 16px;
+                    top: 16px;
                     right: 16px;
                 }
 
@@ -89,6 +89,7 @@ export class AppHome extends LitElement {
             <app-header></app-header>
 
             <main>
+                <pwa-install>Install Soundscape</pwa-install>
                 <div id="welcomeBar">
                     <sl-card id="welcomeCard">
                         <div slot="header">
@@ -165,8 +166,6 @@ export class AppHome extends LitElement {
                         >Navigate to Detail</sl-button
                     >
                 </div>
-
-                <pwa-install>Install Soundscape</pwa-install>
             </main>
         `
     }
