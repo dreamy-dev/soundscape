@@ -4,6 +4,7 @@ import { Router } from '@vaadin/router'
 
 import './pages/app-home'
 import './components/header'
+import './components/modal'
 import './components/card'
 
 import './styles/global.css'
