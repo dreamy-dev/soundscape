@@ -43,6 +43,13 @@ export class AppHome extends LitElement {
                     justify-content: flex-end;
                 }
 
+                .column {
+                    width: 96vw;
+                    display: flex;
+                    scroll-behavior: smooth;
+                    overflow-x: scroll;
+                }
+
                 @media (min-width: 750px) {
                     sl-card {
                         width: 70vw;
@@ -91,71 +98,26 @@ export class AppHome extends LitElement {
             <main>
                 <pwa-install>Install Soundscape</pwa-install>
                 <div id="welcomeBar">
-                    <sl-card id="welcomeCard">
-                        <div slot="header">
-                            <h2>${this.message}</h2>
-                        </div>
-
-                        <div>
-                            <p>Ember</p>
-                            <audio controls>
-                                <source
-                                    src="assets/audio/ember.mp3"
-                                    type="audio/mpeg"
-                                />
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-
-                        <div>
-                            <p>Ocean Waves</p>
-                            <audio controls>
-                                <source
-                                    src="assets/audio/ocean_waves.mp3"
-                                    type="audio/mpeg"
-                                />
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-
-                        <div>
-                            <p>Delightful River</p>
-                            <audio controls>
-                                <source
-                                    src="assets/audio/delightful_river.mp3"
-                                    type="audio/mpeg"
-                                />
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-
-                        <div>
-                            <p>Water Drips</p>
-                            <audio controls>
-                                <source
-                                    src="assets/audio/water_drips.mp3"
-                                    type="audio/mpeg"
-                                />
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-
-                        ${'share' in navigator
-                            ? html`<sl-button
-                                  slot="footer"
-                                  variant="primary"
-                                  @click="${this.share}"
-                                  >Share this Starter!</sl-button
-                              >`
-                            : null}
-                    </sl-card>
-
-                    <div>
-                        <h3>Hello</h3>
+                    <div class="column">
                         <app-card
-                            title="Ballonfahrt"
-                            bg-image=""
+                            title="Water Drips"
+                            bgimage="assets/covers/balloon-ride.jpg"
                             audio="assets/audio/delightful_river.mp3"
+                        ></app-card>
+                        <app-card
+                            title="Ocean Waves"
+                            bgimage="assets/covers/starry-night.jpg"
+                            audio="assets/audio/ocean_waves.mp3"
+                        ></app-card>
+                        <app-card
+                            title="Delightful River"
+                            bgimage="assets/covers/moonshine.jpg"
+                            audio="assets/audio/delightful_river.mp3"
+                        ></app-card>
+                        <app-card
+                            title="Ember"
+                            bgimage="assets/covers/island-sunset.jpg"
+                            audio="assets/audio/ember.mp3"
                         ></app-card>
                     </div>
 
@@ -163,11 +125,6 @@ export class AppHome extends LitElement {
                         href="${(import.meta as any).env.BASE_URL}about"
                         variant="primary"
                         >Navigate to About</sl-button
-                    >
-                    <sl-button
-                        href="${(import.meta as any).env.BASE_URL}detail"
-                        variant="primary"
-                        >Navigate to Detail</sl-button
                     >
                 </div>
             </main>

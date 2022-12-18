@@ -24,10 +24,14 @@ export class AppCard extends LitElement {
             }
 
             .card {
-                width: 600px;
+                width: 300px;
                 height: 400px;
                 background-size: cover;
                 background-repeat: no-repeat;
+                border-radius: 15px;
+                padding: 20px;
+                box-sizing: border-box;
+                margin-right: 20px;
             }
 
             .modal {
@@ -70,10 +74,16 @@ export class AppCard extends LitElement {
                     style="background-image: url('${this.bgimage}')"
                     @click="${() => (this.active = !this.active)}"
                 >
-                    <h3>${this.title} ${this.active}</h3>
+                    <h3>${this.title}</h3>
                 </div>
 
-                <app-modal class="modal" audio="${this.audio}"></app-modal>
+                <app-modal
+                    class="modal"
+                    audio="${this.audio}"
+                    @click="${() => (this.active = !this.active)}"
+                    title="${this.title}"
+                    bgimage="${this.bgimage}"
+                ></app-modal>
             </div>
         `
     }
