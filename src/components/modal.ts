@@ -18,11 +18,25 @@ export class Modal extends LitElement {
                 margin-left: 10px;
             }
 
-            .card {
-                width: 600px;
-                height: 400px;
+            .modal {
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0px;
+                z-index: 3;
+            }
+
+            .player-zone {
+                width: 50vw;
+                height: 100vh;
+                margin: auto;
                 background-size: cover;
                 background-repeat: no-repeat;
+            }
+
+            h3 {
+                margin: 0;
             }
 
             @media (prefers-color-scheme: light) {
@@ -43,9 +57,9 @@ export class Modal extends LitElement {
 
     render() {
         return html`
-            <div>
+            <div class="modal">
                 <div
-                    class="card"
+                    class="player-zone"
                     style="background-image: url('${this.bgimage}')"
                 >
                     ${this.enableBack
