@@ -56,6 +56,9 @@ export class AppHome extends LitElement {
                     display: flex;
                     scroll-behavior: smooth;
                     overflow-x: scroll;
+                    height: 90vh;
+                    display: flex;
+                    align-items: center;
                 }
 
                 footer a {

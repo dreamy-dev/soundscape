@@ -29,9 +29,27 @@ export class AppCard extends LitElement {
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-radius: 15px;
-                padding: 20px;
                 box-sizing: border-box;
                 margin-right: 20px;
+                display: flex;
+                align-items: end;
+                transition: box-shadow 0.1s, height 0.1s;
+                transition-timing-function: ease-in-out;
+            }
+
+            .card:hover {
+                box-shadow: rgb(47 35 84 / 30%) 0px 20px 80px,
+                    rgb(0 0 0 / 15%) 0px 20px 40px;
+                height: 440px;
+            }
+
+            .card span {
+                padding: 20px;
+                width: 100%;
+            }
+
+            .card h3 {
+                color: white;
             }
 
             .modal {
@@ -74,7 +92,7 @@ export class AppCard extends LitElement {
                     style="background-image: url('${this.bgimage}')"
                     @click="${() => (this.active = !this.active)}"
                 >
-                    <h3>${this.title}</h3>
+                    <span><h3>${this.title}</h3></span>
                 </div>
 
                 <app-modal

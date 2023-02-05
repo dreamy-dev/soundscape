@@ -26,10 +26,11 @@ export class Modal extends LitElement {
                 left: 0px;
                 z-index: 3;
                 background-color: white;
+                background-size: cover;
             }
 
             .player-zone {
-                width: 50vw;
+                width: 100vw;
                 height: 100vh;
                 margin: auto;
                 background-size: cover;
@@ -38,6 +39,7 @@ export class Modal extends LitElement {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                backdrop-filter: blur(40px);
             }
 
             .cover-image {
@@ -72,7 +74,10 @@ export class Modal extends LitElement {
 
     render() {
         return html`
-            <div class="modal">
+            <div
+                class="modal"
+                style="background-image: url('${this.bgimage}');"
+            >
                 <div class="player-zone">
                     ${this.enableBack
                         ? html`<sl-button
