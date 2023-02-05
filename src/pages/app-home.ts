@@ -38,6 +38,14 @@ export class AppHome extends LitElement {
                     right: 16px;
                 }
 
+                main {
+                    height: 90vh;
+                }
+
+                app-card:hover {
+                    cursor: pointer;
+                }
+
                 sl-card::part(footer) {
                     display: flex;
                     justify-content: flex-end;
@@ -48,6 +56,11 @@ export class AppHome extends LitElement {
                     display: flex;
                     scroll-behavior: smooth;
                     overflow-x: scroll;
+                }
+
+                footer a {
+                    color: black;
+                    text-decoration: none;
                 }
 
                 @media (min-width: 750px) {
@@ -120,14 +133,16 @@ export class AppHome extends LitElement {
                             audio="assets/audio/ember.mp3"
                         ></app-card>
                     </div>
-
-                    <sl-button
-                        href="${(import.meta as any).env.BASE_URL}about"
-                        variant="primary"
-                        >Navigate to About</sl-button
-                    >
                 </div>
             </main>
+            <footer>
+                <a
+                    href="${(import.meta as any).env.BASE_URL}about"
+                    variant="primary"
+                >
+                    <p>Navigate to About</p>
+                </a>
+            </footer>
         `
     }
 }
