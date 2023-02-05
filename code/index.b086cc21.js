@@ -1,4 +1,4 @@
-var Do=Object.defineProperty,jo=Object.defineProperties;var Ho=Object.getOwnPropertyDescriptors;var je=Object.getOwnPropertySymbols;var Io=Object.prototype.hasOwnProperty,zo=Object.prototype.propertyIsEnumerable;var He=(e,t,r)=>t in e?Do(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r,Ie=(e,t)=>{for(var r in t||(t={}))Io.call(t,r)&&He(e,r,t[r]);if(je)for(var r of je(t))zo.call(t,r)&&He(e,r,t[r]);return e},ze=(e,t)=>jo(e,Ho(t));const Vo=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))o(i);new MutationObserver(i=>{for(const n of i)if(n.type==="childList")for(const s of n.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&o(s)}).observe(document,{childList:!0,subtree:!0});function r(i){const n={};return i.integrity&&(n.integrity=i.integrity),i.referrerpolicy&&(n.referrerPolicy=i.referrerpolicy),i.crossorigin==="use-credentials"?n.credentials="include":i.crossorigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function o(i){if(i.ep)return;i.ep=!0;const n=r(i);fetch(i.href,n)}};Vo();const Fo="modulepreload",Ve={},Wo="/soundscape/",qo=function(t,r){return!r||r.length===0?t():Promise.all(r.map(o=>{if(o=`${Wo}${o}`,o in Ve)return;Ve[o]=!0;const i=o.endsWith(".css"),n=i?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${o}"]${n}`))return;const s=document.createElement("link");if(s.rel=i?"stylesheet":Fo,i||(s.as="script",s.crossOrigin=""),s.href=o,document.head.appendChild(s),i)return new Promise((d,a)=>{s.addEventListener("load",d),s.addEventListener("error",()=>a(new Error(`Unable to preload CSS for ${o}`)))})})).then(()=>t())};/**
+var Do=Object.defineProperty,jo=Object.defineProperties;var Ho=Object.getOwnPropertyDescriptors;var je=Object.getOwnPropertySymbols;var Io=Object.prototype.hasOwnProperty,zo=Object.prototype.propertyIsEnumerable;var He=(e,t,r)=>t in e?Do(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r,Ie=(e,t)=>{for(var r in t||(t={}))Io.call(t,r)&&He(e,r,t[r]);if(je)for(var r of je(t))zo.call(t,r)&&He(e,r,t[r]);return e},ze=(e,t)=>jo(e,Ho(t));const Vo=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))o(i);new MutationObserver(i=>{for(const n of i)if(n.type==="childList")for(const s of n.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&o(s)}).observe(document,{childList:!0,subtree:!0});function r(i){const n={};return i.integrity&&(n.integrity=i.integrity),i.referrerpolicy&&(n.referrerPolicy=i.referrerpolicy),i.crossorigin==="use-credentials"?n.credentials="include":i.crossorigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function o(i){if(i.ep)return;i.ep=!0;const n=r(i);fetch(i.href,n)}};Vo();const Fo="modulepreload",Ve={},Wo="/",qo=function(t,r){return!r||r.length===0?t():Promise.all(r.map(o=>{if(o=`${Wo}${o}`,o in Ve)return;Ve[o]=!0;const i=o.endsWith(".css"),n=i?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${o}"]${n}`))return;const s=document.createElement("link");if(s.rel=i?"stylesheet":Fo,i||(s.as="script",s.crossOrigin=""),s.href=o,document.head.appendChild(s),i)return new Promise((d,a)=>{s.addEventListener("load",d),s.addEventListener("error",()=>a(new Error(`Unable to preload CSS for ${o}`)))})})).then(()=>t())};/**
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
@@ -1066,7 +1066,7 @@ found at http://polymer.github.io/PATENTS.txt
             </main>
             <footer>
                 <a
-                    href="${"/soundscape/"}about"
+                    href="${"/"}about"
                     variant="primary"
                 >
                     <p>Navigate to About</p>
@@ -1122,7 +1122,7 @@ found at http://polymer.github.io/PATENTS.txt
             <header>
                 <div id="back-button-block">
                     ${this.enableBack?F`<sl-button
-                              href="${"/soundscape/"}"
+                              href="${"/"}"
                           >
                               Back
                           </sl-button>`:null}
@@ -1189,7 +1189,7 @@ found at http://polymer.github.io/PATENTS.txt
             >
                 <div class="player-zone">
                     ${this.enableBack?F`<sl-button
-                              href="${"/soundscape/"}"
+                              href="${"/"}"
                           >
                               Back
                           </sl-button>`:null}
@@ -1319,11 +1319,11 @@ found at http://polymer.github.io/PATENTS.txt
                     opacity: 1;
                 }
             }
-        `}constructor(){super()}firstUpdated(){var t;new I((t=this.shadowRoot)==null?void 0:t.querySelector("#routerOutlet")).setRoutes([{path:"/soundscape/",animate:!0,children:[{path:"",component:"app-home"},{path:"about",component:"app-about",action:async()=>{await qo(()=>import("./app-about.793e2197.js"),[])}}]}])}render(){return F`
+        `}constructor(){super()}firstUpdated(){var t;new I((t=this.shadowRoot)==null?void 0:t.querySelector("#routerOutlet")).setRoutes([{path:"/",animate:!0,children:[{path:"",component:"app-home"},{path:"about",component:"app-about",action:async()=>{await qo(()=>import("./app-about.60ee27a2.js"),[])}}]}])}render(){return F`
             <div>
                 <main>
                     <div id="routerOutlet"></div>
                 </main>
             </div>
         `}};zr=is([Pt("app-index")],zr);export{Kn as a,Pt as e,dt as i,M as s,F as y};
-//# sourceMappingURL=index.4bc840f1.js.map
+//# sourceMappingURL=index.b086cc21.js.map
