@@ -1,13 +1,28 @@
 importScripts(
     'https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js'
-  );
+)
 
-  self.addEventListener('push', () => {
+const CACHE_NAME = 'cool-cache'
+
+// Add whichever assets you want to pre-cache here:
+const PRECACHE_ASSETS = ['/assets/']
+
+// Listener for the install event - pre-caches our assets list on service worker install.
+self.addEventListener('install', (event) => {
     event.waitUntil(
-      registration.showNotification("Hello!", {
-        body: "This is a push notification!",
-      })
-    );
-  });
+        (async () => {
+            const cache = await caches.open(CACHE_NAME)
+            cache.addAll(PRECACHE_ASSETS)
+        })()
+    )
+})
 
-  workbox.precaching.precacheAndRoute(self.__WB_MANIFEST || []);
+self.addEventListener('push', () => {
+    event.waitUntil(
+        registration.showNotification('Hello!', {
+            body: 'This is a push notification!',
+        })
+    )
+})
+
+workbox.precaching.precacheAndRoute(self.__WB_MANIFEST || [])
