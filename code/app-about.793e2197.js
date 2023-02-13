@@ -1,4 +1,4 @@
-import{i as c,s as h,y as i,a as u,e as d}from"./index.b086cc21.js";const m=c`
+import{i as c,s as h,y as i,a as u,e as d}from"./index.4bc840f1.js";const m=c`
   @media(min-width: 1000px) {
     sl-card {
       max-width: 70vw;
@@ -33,4 +33,4 @@ import{i as c,s as h,y as i,a as u,e as d}from"./index.b086cc21.js";const m=c`
                 </sl-card>
             </main>
         `}};p.styles=[u,m];p=v([d("app-about")],p);export{p as AppAbout};
-//# sourceMappingURL=app-about.60ee27a2.js.map
+//# sourceMappingURL=app-about.793e2197.js.map
