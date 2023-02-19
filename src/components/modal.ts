@@ -55,6 +55,7 @@ export class Modal extends LitElement {
             h3 {
                 margin: 50px 0;
                 color: white;
+                text-shadow: black -4px 3px 40px;
             }
 
             @media (prefers-color-scheme: light) {

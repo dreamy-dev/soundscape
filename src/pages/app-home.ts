@@ -118,24 +118,39 @@ export class AppHome extends LitElement {
                 <div id="welcomeBar">
                     <div class="column">
                         <app-card
-                            title="Water Drips"
-                            bgimage="assets/covers/balloon-ride.jpg"
-                            audio="assets/audio/delightful_river.mp3"
+                            title="Deep Focus Dive"
+                            bgimage="assets/covers/underwater.jpg"
+                            audio="assets/audio/Underwater.mp3"
                         ></app-card>
                         <app-card
-                            title="Ocean Waves"
-                            bgimage="assets/covers/starry-night.jpg"
+                            title="Cave Curiosity"
+                            bgimage="assets/covers/cave.jpg"
+                            audio="assets/audio/water_drips.mp3"
+                        ></app-card>
+                        <app-card
+                            title="Longing for Life"
+                            bgimage="assets/covers/balloon-ride.jpg"
+                            audio="assets/audio/The-Distance-Between-Me-And-You.wav"
+                        ></app-card>
+                        <app-card
+                            title="Ocean Waves Wind down"
+                            bgimage="assets/covers/island-sunset.jpg"
                             audio="assets/audio/ocean_waves.mp3"
                         ></app-card>
                         <app-card
-                            title="Delightful River"
-                            bgimage="assets/covers/moonshine.jpg"
+                            title="Babbling Brook"
+                            bgimage="assets/covers/bach.jpg"
                             audio="assets/audio/delightful_river.mp3"
                         ></app-card>
                         <app-card
-                            title="Ember"
-                            bgimage="assets/covers/island-sunset.jpg"
-                            audio="assets/audio/ember.mp3"
+                            title="Flutes Floods"
+                            bgimage="assets/covers/starry-night.jpg"
+                            audio="assets/audio/peaceful-flutes.oga"
+                        ></app-card>
+                        <app-card
+                            title="Peaceful Slumber"
+                            bgimage="assets/covers/moonshine.jpg"
+                            audio="assets/audio/peaceful-slumber.oga"
                         ></app-card>
                     </div>
                 </div>
