@@ -1160,7 +1160,7 @@ found at http://polymer.github.io/PATENTS.txt
             .modal {
                 width: 100vw;
                 height: 100vh;
-                position: absolute;
+                position: fixed;
                 top: 0;
                 left: 0px;
                 z-index: 3;
@@ -1193,6 +1193,7 @@ found at http://polymer.github.io/PATENTS.txt
 
             h3 {
                 margin: 50px 0;
+                color: white;
             }
 
             @media (prefers-color-scheme: light) {
@@ -1255,6 +1256,8 @@ found at http://polymer.github.io/PATENTS.txt
             .card span {
                 padding: 20px;
                 width: 100%;
+                border-radius: 15px;
+                background: linear-gradient(0deg, #010023, transparent);
             }
 
             .card h3 {
@@ -1336,11 +1339,11 @@ found at http://polymer.github.io/PATENTS.txt
                     opacity: 1;
                 }
             }
-        `}constructor(){super()}firstUpdated(){var t;new I((t=this.shadowRoot)==null?void 0:t.querySelector("#routerOutlet")).setRoutes([{path:"/soundscape/",animate:!0,children:[{path:"",component:"app-home"},{path:"about",component:"app-about",action:async()=>{await qo(()=>import("./app-about.5cbba0bc.js"),[])}}]}])}render(){return z`
+        `}constructor(){super()}firstUpdated(){var t;new I((t=this.shadowRoot)==null?void 0:t.querySelector("#routerOutlet")).setRoutes([{path:"/soundscape/",animate:!0,children:[{path:"",component:"app-home"},{path:"about",component:"app-about",action:async()=>{await qo(()=>import("./app-about.36f24cc6.js"),[])}}]}])}render(){return z`
             <div>
                 <main>
                     <div id="routerOutlet"></div>
                 </main>
             </div>
         `}};zr=is([Pt("app-index")],zr);export{Kn as a,Pt as e,dt as i,M as s,z as y};
-//# sourceMappingURL=index.805acaef.js.map
+//# sourceMappingURL=index.bef456a3.js.map
