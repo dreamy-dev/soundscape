@@ -33,7 +33,8 @@ export class AppCard extends LitElement {
                 margin-right: 20px;
                 display: flex;
                 align-items: end;
-                transition: box-shadow 0.1s, height 0.1s;
+                will-change: box-shadow, height;
+                transition: box-shadow 0.3s, height 0.3s;
                 transition-timing-function: ease-in-out;
             }
 

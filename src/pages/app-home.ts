@@ -52,7 +52,8 @@ export class AppHome extends LitElement {
                 }
 
                 .column {
-                    width: 96vw;
+                    padding-left: 4vw;
+                    width: 100vw;
                     display: flex;
                     scroll-behavior: smooth;
                     overflow-x: scroll;
