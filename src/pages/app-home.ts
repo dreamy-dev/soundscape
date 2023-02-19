@@ -40,6 +40,7 @@ export class AppHome extends LitElement {
 
                 main {
                     height: 90vh;
+                    overflow-x: clip;
                 }
 
                 app-card:hover {

@@ -4,7 +4,7 @@ import { property, customElement } from 'lit/decorators.js'
 import '@shoelace-style/shoelace/dist/components/button/button.js'
 @customElement('app-header')
 export class AppHeader extends LitElement {
-    @property({ type: String }) title = 'Soundscapes'
+    @property({ type: String }) title = 'Soundscape'
 
     @property({ type: Boolean }) enableBack: boolean = false
 
@@ -17,15 +17,14 @@ export class AppHeader extends LitElement {
                 background: var(--app-color-primary);
                 color: white;
                 height: 4em;
-                padding-left: 16px;
-                padding-top: 12px;
+                padding: 12px 4vw 0;
 
-                position: fixed;
+                /* position: fixed;
                 left: env(titlebar-area-x, 0);
                 top: env(titlebar-area-y, 0);
                 height: env(titlebar-area-height, 50px);
                 width: env(titlebar-area-width, 100%);
-                -webkit-app-region: drag;
+                -webkit-app-region: drag; */
             }
 
             header h1 {
@@ -43,6 +42,25 @@ export class AppHeader extends LitElement {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                width: 12em;
+            }
+
+            .logo {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .logo h1 {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.3em;
+                padding-top: 4px;
+            }
+            .placeholder {
                 width: 12em;
             }
 
@@ -71,11 +89,14 @@ export class AppHeader extends LitElement {
                               href="${(import.meta as any).env.BASE_URL}"
                           >
                               Back
-                          </sl-button>`
+                          </sl-button> `
                         : null}
-
-                    <h1>${this.title}</h1>
                 </div>
+                <div class="logo">
+                    <img src="/assets/logo.svg" height="30" />
+                    ${this.enableBack ? null : html`<h1>${this.title}</h1>`}
+                </div>
+                <div class="placeholder"></div>
             </header>
         `
     }
