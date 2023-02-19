@@ -21,7 +21,7 @@ export class Modal extends LitElement {
             .modal {
                 width: 100vw;
                 height: 100vh;
-                position: absolute;
+                position: fixed;
                 top: 0;
                 left: 0px;
                 z-index: 3;
@@ -54,6 +54,7 @@ export class Modal extends LitElement {
 
             h3 {
                 margin: 50px 0;
+                color: white;
             }
 
             @media (prefers-color-scheme: light) {

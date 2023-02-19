@@ -47,6 +47,8 @@ export class AppCard extends LitElement {
             .card span {
                 padding: 20px;
                 width: 100%;
+                border-radius: 15px;
+                background: linear-gradient(0deg, #010023, transparent);
             }
 
             .card h3 {
