@@ -3,7 +3,7 @@
     "scope": "/",
     "name": "Soundscape",
     "display": "standalone",
-    "start_url": "/soundscape/",
+    "start_url": "/",
     "short_name": "Soundscape",
     "theme_color": "#010023",
     "description": "This is the Soundscape app",
